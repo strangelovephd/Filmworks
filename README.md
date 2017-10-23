@@ -14,6 +14,6 @@
 - Initial program loop
 - Update variables
 - Basic program function
-..- ~~Package class and derived classes~~
-..- Customer class functions
-..- Order class functions
+- ~~Package class and derived classes~~
+- Customer class functions
+- Order class functions

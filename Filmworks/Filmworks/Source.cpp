@@ -1,4 +1,5 @@
 #include "package.h"
+#include "Customer.h"
 #include <iostream>
 
 int main() {

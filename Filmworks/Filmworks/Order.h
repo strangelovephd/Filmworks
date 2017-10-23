@@ -24,6 +24,8 @@ namespace filmworks {
 	class Order {
 		std::vector<package> m_itemized_list;
 	public:
+
+		// Methods
 		double m_get_sub() {
 			double sub = 0.0;
 			if (!m_itemized_list.empty()) {
@@ -36,6 +38,16 @@ namespace filmworks {
 
 		double m_get_total() {
 			return m_get_sub() * TAX;
+		}
+
+		void m_add_to_list(int package) {
+			switch (package) {
+			case 1: m_itemized_list.push_back(package_a);
+					break;
+			case 2: m_itemized_list.push_back(package_b);
+					break;
+			case 3: m_itemized_list.push_back(package_c);
+			}
 		}
 	};
 }

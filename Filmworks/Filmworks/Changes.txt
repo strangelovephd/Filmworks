@@ -1,0 +1,4 @@
+Changes 12/18/2017:
+*	Created Receipt_Serialization.cpp, Receipt_Serialization.h
+*	Changed formatting of comments
+*	Changed variable and function formatting (t_ for arguments, m_ private members)

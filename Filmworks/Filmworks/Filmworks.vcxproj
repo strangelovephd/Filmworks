@@ -111,11 +111,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="package.h" />
+    <ClCompile Include="Package.h" />
+    <ClCompile Include="Receipt_Serialization.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Order.h" />
+    <ClInclude Include="Receipt_Serialization.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Changes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

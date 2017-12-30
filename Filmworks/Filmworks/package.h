@@ -11,7 +11,7 @@
 
 #pragma once
 
-	//**************************************************************************
+   //***************************************************************************
 	//	Constant price variables.  Change and recompile to
 	//	to update program/price list.
 	//	Package prices:
@@ -26,16 +26,16 @@
 	const double PRICE_FIVEBYSEVEN = TBD;
 	const double PRICE_FOURBYFIVE  = TBD;
 	const double PRICE_WALLET      = TBD;
-	//**************************************************************************
+   //***************************************************************************
 
 
 namespace filmworks {
 
 
-	//**************************************************************************
+	//***************************************************************************
 	//	The package class serves as the base class for each 
 	//	derived package class
-	//**************************************************************************
+	//***************************************************************************
 
 	class package {
 		const double m_price = TBD;
@@ -46,10 +46,10 @@ namespace filmworks {
 		double get_price() { return m_price; }
 	};
 
-	//**************************************************************************
+	//***************************************************************************
 	//	For each derived class, the constructor just passes
 	//	constant info into the base "package" class constructor
-	//**************************************************************************
+	//***************************************************************************
 
 	class package_a : public package {
 
@@ -82,7 +82,7 @@ namespace filmworks {
 		package_e() : package(PRICE_E) {};
 	};
 
-	//**************************************************************************
+   //***************************************************************************
 	//	Having an a la carte base class for the a la carte items
 	//	didn't seem to work.  
 	//	class a_la_carte : public package {
@@ -90,7 +90,7 @@ namespace filmworks {
 	//public:
 	//	a_la_carte() : package(TBD) {};
 	//};
-	//**************************************************************************
+   //***************************************************************************
 
 	class eight_by_ten : public package {
 

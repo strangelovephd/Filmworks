@@ -16,13 +16,13 @@
 //******************************************************************************
 //	Constant tax variable.  Change and recompile in order
 //	to update tax percentage.
-const double TAX = 1.0725;
+const double TAX = 0.0725;
 //******************************************************************************
 
 namespace filmworks {
 
 
-	//**************************************************************************
+	//***************************************************************************
 	class Order {
 	private:
 		std::vector<package> m_itemized_list;
@@ -30,7 +30,7 @@ namespace filmworks {
 
 		//*Methods
 
-		//**********************************************************************
+		//************************************************************************
 		//	Returns sub total
 		double get_sub() {
 			double sub = 0.0;
@@ -42,11 +42,22 @@ namespace filmworks {
 			return sub;
 		} 
 
-		//**********************************************************************
+		//************************************************************************
 		//	Returns sub total * tax rate
 		double get_total() {
-			return get_sub() * TAX;
+			return get_sub() + get_tax();
 		}
+
+      //************************************************************************
+      // Returns tax amount
+      double get_tax() {
+         return get_sub() * TAX;
+      }
+      //************************************************************************
+      // Returns num of items
+      int get_num_items() {
+         return m_itemized_list.size();
+      }
 
 		//
 		void add_to_list(int package) {

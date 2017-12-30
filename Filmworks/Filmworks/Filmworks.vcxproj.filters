@@ -21,7 +21,7 @@
     <ClCompile Include="Package.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="Receipt_Serialization.cpp">
+    <ClCompile Include="Receipt_Creator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +29,7 @@
     <ClInclude Include="Order.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Receipt_Serialization.h">
+    <ClInclude Include="Receipt_Creator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

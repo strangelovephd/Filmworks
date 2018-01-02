@@ -31,17 +31,17 @@ namespace filmworks{
       receipt << std::setw(30) << std::right << std::setfill('*') << '\n';
    }
 
-   void Receipt_Creator::create_body(const Order& curr_order) {
-      os << "Number:" << std::setw(30) << std::setfill('.') << std::right
+   void Receipt_Creator::create_body(Order& curr_order) {
+      receipt << "Number:" << std::setw(30) << std::setfill('.') << std::right
          << "Item:" << std::setw(4) << std::setfill('.') << std::right
          << "Price:\n";
 
 
-      os << "Number of items: " << curr_order.get_num_items() << setw(11)
+      receipt << "Number of items: " << curr_order.get_num_items() << std::setw(11)
          << std::right << "Sub: " << curr_order.get_sub() << '\n';
-      os << std::setw(30) << std::right << "Tax (" << TAX * 100 << "%): "
+      receipt << std::setw(30) << std::right << "Tax (" << TAX * 100 << "%): "
          << curr_order.get_tax() << '\n';
-      os << std::setw(30) << std::right << "Total: " << curr_order.get_total();
+      receipt << std::setw(30) << std::right << "Total: " << curr_order.get_total();
 
    }
 }

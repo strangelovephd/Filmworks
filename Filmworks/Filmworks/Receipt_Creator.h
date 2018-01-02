@@ -25,7 +25,7 @@ namespace filmworks {
       Receipt_Creator(const char* file_name);
       ~Receipt_Creator();
       void create_header();
-		void create_body(const Order& curr_order);
+		void create_body(Order& curr_order);
 	};
 
 }

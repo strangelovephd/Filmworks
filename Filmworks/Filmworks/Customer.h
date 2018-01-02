@@ -1,14 +1,13 @@
-//********************************************************
-// Written by: Wesley Hendriksen
-// Initially written on: 10/22/2017
-// Summary:
-// The customer is the base wrapper that everything will 
-// based upon.  The customer will initially have one
-// order object, but I plan to expand upon it after I
-// come up with a serialization scheme.
-// To do:
-// Serialization
-//********************************************************
+//******************************************************************************
+//	Written by: Wesley Hendriksen
+//	Initially written on: 10/22/2017
+//	Summary:
+// The customer is the base wrapper that everything will based upon.  The 
+// customer will initially have one order object, but I plan to expand upon it
+// after I come up with a serialization scheme.
+//	To do:
+//	Serialization
+//******************************************************************************
 
 #pragma once
 #include "Order.h"
@@ -32,9 +31,15 @@ namespace filmworks {
 		{}
 
 		// Getter methods for customer info
-		std::string m_get_name() const { return m_name; }
-		std::string m_get_street() const { return m_street; }
-		std::string m_get_city() const { return m_street; }
-		std::string m_get_phone() const { return m_phone; }
-	};
+		inline std::string get_name() const { return m_name; }
+		inline std::string get_street() const { return m_street; }
+		inline std::string get_city() const { return m_street; }
+		inline std::string get_phone() const { return m_phone; }
+
+      // Const overloads of the above:
+      //inline const std::string get_name() const { return m_name; }
+      //inline const std::string get_street() const { return m_street; }
+      //inline const std::string get_city() const { return m_street; }
+      //inline const std::string get_phone() const { return m_phone; }
+   };
 }

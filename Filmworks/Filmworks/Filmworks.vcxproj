@@ -111,11 +111,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Order.cpp" />
     <ClCompile Include="Package.h" />
     <ClCompile Include="Receipt_Creator.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Customer.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="Order.h" />
     <ClInclude Include="Receipt_Creator.h" />
   </ItemGroup>

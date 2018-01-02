@@ -11,7 +11,9 @@
 
 #pragma once
 #include <vector>
+#include <Windows.h>
 #include "Package.h"
+
 
 //******************************************************************************
 //	Constant tax variable.  Change and recompile in order
@@ -25,22 +27,19 @@ namespace filmworks {
 	//***************************************************************************
 	class Order {
 	private:
+      _SYSTEMTIME m_order_time;
 		std::vector<package> m_itemized_list;
+
 	public:
+      //************************************************************************
+      // Constructor
+      Order();
 
 		//*Methods
 
 		//************************************************************************
 		//	Returns sub total
-		double get_sub() {
-			double sub = 0.0;
-			if (!m_itemized_list.empty()) {
-				for (unsigned int i = 0; i < m_itemized_list.size(); ++i) {
-					sub += itemized_list[i].get_price();
-				}
-			}
-			return sub;
-		} 
+      double get_sub();
 
 		//************************************************************************
 		//	Returns sub total * tax rate
@@ -53,21 +52,16 @@ namespace filmworks {
       double get_tax() {
          return get_sub() * TAX;
       }
+
       //************************************************************************
       // Returns num of items
-      int get_num_items() {
+      inline int get_num_items() {
          return m_itemized_list.size();
       }
 
-		//
-		void add_to_list(int package) {
-			switch (package) {
-			case 1: m_itemized_list.push_back(package_a);
-					break;
-			case 2: m_itemized_list.push_back(package_b);
-					break;
-			case 3: m_itemized_list.push_back(package_c);
-			}
-		}
+
+      //************************************************************************
+      // Adds a package to the m_itemized_list vector
+      void add_to_list(int package);
 	};
 }

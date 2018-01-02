@@ -42,7 +42,7 @@ namespace filmworks {
 	public:
 		//*Constructor
 		package(double t_price = TBD)
-			: price(t_price) {};
+			: m_price(t_price) {};
 		double get_price() { return m_price; }
 	};
 
